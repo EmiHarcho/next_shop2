@@ -1,0 +1,14 @@
+.home{
+    height: 100%;
+    width: 100%;
+
+    .cardsList{
+        max-width: 1000px;
+        display: grId;
+        grid-template-columns: repeat(4, 206px);
+        grid-gap: 30px;
+        margin: 0 auto;
+        margin-top: 40px;
+        justify-content: space-around;
+    }
+}

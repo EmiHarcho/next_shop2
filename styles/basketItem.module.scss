@@ -1,0 +1,48 @@
+.basketItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.199);
+
+    .size{
+        min-width: 40px;
+        max-width: 40px;
+    }
+    .price{
+        font-size: 20px;
+        min-width: 60px;
+        max-width: 60px;
+    }
+    .count_block{
+        display: flex;
+        align-items: center;
+        width: 90px;
+        justify-content: space-between;
+        
+        .plus, .minus{
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all .3s;
+            user-select: none;
+            &:hover{
+                background: black;
+                color: white;
+            }
+        }
+        .count{
+            cursor: pointer;
+        }
+    }
+}

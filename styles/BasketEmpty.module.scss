@@ -1,0 +1,28 @@
+.basketEmpty{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    img{
+        margin-bottom: 30px;    
+    }
+    &_btn{
+        padding: 10px 15px;
+        background-color: black;
+        font-size: 20px;
+        margin-top: 30px;
+        cursor: pointer;
+        color: white;
+        border: black 2px solid;
+        transition: all .4s;
+
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+}

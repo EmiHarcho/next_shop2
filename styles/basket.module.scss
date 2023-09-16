@@ -1,0 +1,29 @@
+.basket{
+    height: 100%;
+    width: 100%;             
+
+    &_header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+
+        h2{}
+
+        .clear{
+            cursor: pointer;
+            position: relative;
+            &::before{
+                content: '';
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                left: -30px;
+                top: -5px;
+                background-image: url('../img/Basket/trash.png');
+                background-size: cover;
+            }
+        }
+    }
+}
