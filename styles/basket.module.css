@@ -1,0 +1,39 @@
+.basket {
+  min-height: 60vh;
+  width: 100%;
+  max-width: 1000px;
+}
+.basket_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+.basket_header .clear {
+  cursor: pointer;
+  position: relative;
+  font-size: 18px;
+  border: 2px solid black;
+  padding: 5px 5px 5px 30px;
+}
+.basket_header .clear::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  background-image: url("../img/Basket/trash.png");
+  background-size: cover;
+}
+.basket .total_block {
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px;
+}
+.basket .total_block .total_info {
+  font-size: 20px;
+}/*# sourceMappingURL=basket.module.css.map */

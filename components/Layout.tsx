@@ -1,11 +1,12 @@
 import React from 'react'
 import Footer from './Footer'
-import Header from './Header'
 import styles from '../styles/layout.module.scss'
+import dynamic from 'next/dynamic'
+const NoSSRheader = dynamic(() => import('../components/Header'), { ssr: false })
 
 const Layout = ({children} : any) => (
     <div className={styles.layout}>
-      <Header/>
+      <NoSSRheader/>
         {children}
       <Footer/>
     </div>

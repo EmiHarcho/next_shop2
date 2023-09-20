@@ -1,0 +1,16 @@
+.search_block {
+  position: relative;
+  display: flex;
+}
+.search_block input {
+  width: 190px;
+  padding: 5px 30px 5px 15px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 30px;
+}
+.search_block img {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+}/*# sourceMappingURL=search.module.css.map */

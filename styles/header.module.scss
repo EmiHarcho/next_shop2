@@ -1,27 +1,25 @@
 .header{
     width: 100%;
+    max-width: 1000px;
     padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid black;
+
+    img{transition: all .4s;&:hover{transform: rotate(-180deg);}}
 
     // RIGTH
     &_rigth{
         border-radius: 10px;
         padding: 10px;
+        position: relative;
         
-        a{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
             .totalCount{
                 margin-right: 25px;
                 position: relative;
                 color: black;
                 font-weight: 700;
-                
+                font-size: 19px;                
 
                 &::before{
                     content: '';
@@ -30,11 +28,10 @@
                     background: url('../img/Header/basket_icon.svg');
                     background-size: cover;
                     position: absolute;
-                    left: 100%;
-                    top: -2px;
+                    left: 120%;
+                    top: 1px;
                 }
             }
-        }
 
         //HIDDEN BLOCK
         .hidden_block{
@@ -43,7 +40,7 @@
             position: absolute;
             opacity: 0;
             visibility: hidden;
-            right: 40px;
+            right: 10px;
             top: 60px;
             z-index: 2;
             background: white;

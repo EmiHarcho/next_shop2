@@ -1,0 +1,23 @@
+.home {
+  height: 100%;
+  width: 100%;
+  max-width: 1000px;
+}
+.home .filter_block {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .cardsList {
+  width: 100%;
+  max-width: 1000px;
+  display: grId;
+  grid-template-columns: repeat(4, 230px);
+  grid-gap: 30px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  justify-content: space-around;
+}/*# sourceMappingURL=home.module.css.map */

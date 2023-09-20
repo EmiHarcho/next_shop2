@@ -14,4 +14,5 @@ export type BasketCardType = {
 export interface Ibasket {
     basketItems : BasketCardType[],
     totalPrice : number,
+    totalCount : number,
 }

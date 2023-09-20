@@ -1,4 +1,26 @@
 .footer{
     width: 100%;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
+    background: #222222;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    h3{
+        color: #fcf4e4;
+        text-align: center;
+    }
+    hr{
+        height: 2px;
+        width: 70%;
+        margin-top: 15px;
+    }
+    &_icons{
+        img{
+            margin: 10px 10px 0px 10px;
+        }
+    }
 }

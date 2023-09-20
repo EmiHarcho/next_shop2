@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.sort {
+  position: relative;
+  cursor: pointer;
+}
+.sort h3 {
+  margin-left: 20px;
+}
+.sort h3::before {
+  content: "⮟";
+  position: absolute;
+  left: 0px;
+  transition: all 0.4s;
+}
+.sort_list {
+  width: 150px;
+  background-color: white;
+  position: absolute;
+  top: 27px;
+  left: 140px;
+  z-index: 3;
+  padding: 5px;
+  box-shadow: 4px 4px 8px black;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.sort_list li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 3px 0px;
+  transition: all 0.3s;
+}
+.sort_list li:hover {
+  background-color: rgb(184, 184, 184);
+}
+.sort.active .sort_list {
+  opacity: 1;
+  visibility: visible;
+}
+.sort.active h3::before {
+  transform: rotate(-180deg);
+}/*# sourceMappingURL=sort.module.css.map */

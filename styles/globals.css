@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Jost-Italic;
+  src: url(../fonts/Jost-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Jost-VariableFont_wght;
+  src: url(../fonts/Jost-VariableFont_wght.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  font-family: Jost-Italic;
+  padding: 0px 30px;
+}
+
+#__next {
+  height: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: 2px solid white;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=globals.css.map */

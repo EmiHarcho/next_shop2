@@ -2,10 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 0px 30px;
     width: 80%;
     max-width: 800px;
     margin: 0 auto;
+    overflow: hidden;
     margin-top: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.199);
 
@@ -24,7 +25,7 @@
         width: 90px;
         justify-content: space-between;
         
-        .plus, .minus{
+        .plus, .minus, .remove{
             font-size: 20px;
             display: flex;
             align-items: center;

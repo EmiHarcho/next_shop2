@@ -12,6 +12,4 @@ const BasketEmpty = () => (
         <Link className={styles.basketEmpty_btn} href='/'>Вернуться назад</Link>
     </div>
 )
-
-
 export default BasketEmpty
