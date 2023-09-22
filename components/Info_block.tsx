@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/info_block.module.scss'
 
 const Info_block = () => {
+  
   return (
     <div className={styles.info_block}>
         <h2>Неповторимый стиль</h2>

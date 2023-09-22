@@ -2,13 +2,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { BasketCardType, RemoveProps, Ibasket } from "./types";
 import { calcTotalCount } from "@/utils/CalcTotalCount";
 import { calcTotalPrice } from "@/utils/CalcTotalPrice";
-import {getItemsLS} from "@/utils/getItemsLS";
-import { HYDRATE } from "next-redux-wrapper";
-
-// const setItemsToLS = (items : BasketCardType[]) => {
-//     const json = JSON.stringify(items) 
-//     localStorage.setItem('basket', json)    
-// }
 
 const initialState : Ibasket = {
     basketItems : [],
@@ -27,7 +20,6 @@ const basketSlice = createSlice({
                 : state.basketItems.push({...action.payload, count : 1})
             state.totalPrice = calcTotalPrice(state.basketItems)
             state.totalCount = calcTotalCount(state.basketItems)
-            console.log(state.basketItems);
             
         },
         REMOVE_ONE_ITEM(state, action : PayloadAction<RemoveProps>){
@@ -42,14 +34,6 @@ const basketSlice = createSlice({
             state.totalCount = 0
         }
     },
-    extraReducers : {
-        [HYDRATE]: (state, action) => {
-            return {
-              ...state,
-              ...action.payload,
-            };
-          },
-    }
 })
 export default basketSlice.reducer
 export const {ADD_ITEM, REMOVE_ONE_ITEM, REMOVE_ALL} = basketSlice.actions

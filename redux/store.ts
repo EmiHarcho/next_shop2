@@ -2,7 +2,7 @@ import { Action, combineReducers, configureStore, ThunkAction} from "@reduxjs/to
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { createWrapper, HYDRATE } from "next-redux-wrapper";
 import storage from 'redux-persist/lib/storage';
-import { persistReducer, persistStore} from 'redux-persist';
+import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE} from 'redux-persist';
 import cards from './cards/slice'
 import basket from './basket/slice'
 import filter from "./filter/filter"
@@ -16,14 +16,14 @@ const combinedReducer = combineReducers({
 const persistConfig = {
   key: 'root',
   storage,
+  version: 1,
 }
 
 const mainReducer = (state : any, action : any) => {
   // это вызывается, когда происходит запрос на стороне сервера
   if (action.type === HYDRATE) {
     const nextState = {
-      ...state,
-      ...action.payload,
+      ...state
     }
     return nextState
   } 
@@ -36,6 +36,12 @@ const persistedReducer = persistReducer(persistConfig, mainReducer)
 
 const makeConfiguredStore = configureStore({
   reducer : persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 })
 
 export const makeStore = () => {

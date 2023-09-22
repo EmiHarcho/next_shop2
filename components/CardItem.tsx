@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { CardType } from '@/redux/cards/types'
 import { useAppDispatch } from '@/redux/store'
 import { ADD_ITEM} from '@/redux/basket/slice'
-import getItemsLS from '@/utils/getItemsLS'
 
 type PopupClick =  MouseEvent & {path : Node[]}
 
@@ -67,7 +66,7 @@ const CardItem : React.FC<CardType> = ({id, price, sizes, img, count, name}) => 
     
   return (
     <div className={styles.cardsItem} ref={cardItemBlock}>
-      <Image loader={() => img} src={img} width={230} height={330} className={styles.front_side} alt='img'/>
+      <Image loader={() => img} src={img} width={230} height={330} className={styles.front_side} alt='img' unoptimized={true} priority/>
       <div className={styles.inner}>
         
           {/* FRONT SIDE */}

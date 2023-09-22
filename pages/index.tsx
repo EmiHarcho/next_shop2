@@ -25,11 +25,7 @@ const Home = (props : propsType) => {
   
   const {items, status} = useAppSelector((state: RootState) => state.cards)
   const {sort, searchValue} = useAppSelector((state: RootState) => state.filter)
-  const {basketItems} = useAppSelector((state : RootState) => state.basket)
-
-  console.log(basketItems);
   
-
   const dispatch = useAppDispatch()
 
   const sortProperty = sort.sortProperty
